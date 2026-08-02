@@ -320,6 +320,5 @@ changes.
   infrastructure.
 
 ---
-  year    = {2026}
 }
 ```
