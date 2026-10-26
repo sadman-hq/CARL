@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "carl-serverless-routing"
+version = "1.0.0"
+description = "CARL: carbon-aware request routing for multi-region serverless platforms (live testbed, discrete-event simulator, analysis)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "fastapi>=0.100",
+    "uvicorn[standard]>=0.23",
+    "aiohttp>=3.8",
+    "requests>=2.28",
+    "psutil>=5.9",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
